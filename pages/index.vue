@@ -62,6 +62,15 @@ while running:
 
 # Done! Time to quit.
 pygame.quit()`);
+// example code for the Python turtle module
+const turtlesCode = ref(`import turtle
+turtle.getscreen()
+my_turtle = turtle.Turtle()
+my_turtle.forward(80)
+my_turtle.right(45)
+my_turtle.forward(80)
+my_turtle.left(45)
+my_turtle.backward(100)`)
 const showDisplay = ref(true);
 const display = ref();
 const terminal = ref();

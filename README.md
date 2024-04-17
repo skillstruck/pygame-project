@@ -1,14 +1,15 @@
 # Pygame Project
 
-The deliverable for this project is to support three different Python experiences:
+The deliverable for this project is to support three different Python experiences and be flexible enough to work with other programming languages:
 
 1. A standard Python terminal (using Python 3.10)
 2. A Python terminal running Pygame connected to a display
 3. A Python terminal running turtle connected to a display
+4. The option to execute code in other programming languages, such as Java
 
 The user will write their own code in the browser IDE, and then run the code in the respective environment. Up until now, we have used EC2 instances with an AutoScaling Group, but that setup is no longer sufficient for the amount of usage we have been experiencing. We have used Docker within EC2 instances and it works, but is not reliable and does not scale well. The browser would connect via websocket to a simple express server, which would then copy the code into a Docker environment and connect to the python shell using `node-pty`.
 
-We are looking for a more scalable and reliable solution that provides a consistent experience for our users. The python terminal should connect and allow the user to run their file(s) every time. We also need the display to work correctly and show the output of pygame or turtle.
+We are looking for a more scalable and reliable solution that provides a consistent experience for our users. The terminal should connect and allow the user to run their file(s) every time. We also need the display to work correctly and show the output of a pygame or turtle application. The Display component uses NoVNC to connect and display the container's desktop and the specific application.
 
 Providing a consistent user experience is most important, while also being cost effective.
 
