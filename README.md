@@ -32,3 +32,11 @@ npm run dev
 
 # open browser to http://localhost:3000
 ```
+
+## Tests
+
+Unit tests use [Vitest](https://vitest.dev/) with `@nuxt/test-utils` and live in `tests/`:
+
+```bash
+npm test
+```
